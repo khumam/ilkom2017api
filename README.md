@@ -89,15 +89,15 @@ Hasil respon yang memungkinkan.
 "status":"NotFound",
 "data":[
 	{
-		"id": string,
-		"dari": string,
-		"judul": string,
-		"pesan": string,
-		"date": string
+		"id": "string",
+		"dari": "string",
+		"judul": "string",
+		"pesan": "string",
+		"date": "string"
 	}
 
 	{
-		...
+		"..."
 	}
 ]
 }
@@ -111,16 +111,16 @@ Hasil respon yang memungkinkan.
  "status":"Success",
  "data":[
         {
-            "id": string,
-            "makul": string,
-            "hari": string,
-            "jam": string,
-            "tempat": string,
-            "rombel": string
+            "id": "string",
+            "makul": "string",
+            "hari": "string",
+            "jam": "string",
+            "tempat": "string",
+            "rombel": "string"
         }
  
         {
-            ...
+            "..."
         }
  ]
  }
