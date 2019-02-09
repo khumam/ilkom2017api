@@ -1,8 +1,8 @@
-# ilkom2017api
+#ilkom2017api
 Ilkom2017api merupakan sebuah API sederhana untuk mendapatkan informasi umum perkuliahan, informasi beasiswa, dan jadwal perkuliahan.
 API ini bisa digunakan hanya orang tertentu saja karena membutuhkan api key untuk mengaksesnya.
 
-# Penggunaan
+#Penggunaan
 Adapun cara penggunaannya adalah sebagai berikut.
 
 Alamat utama dari API ini adalah
@@ -12,11 +12,14 @@ old :
 
 MAINURL = https://ilkomunnes.000webhostapp.com/api/
 
-new
+new :
+
 MAINURL = https://ilkom2017api.herokuapp.com
 ```
 
+
 Fungsi yang tersedia hanya GET. Berikut parameternya.
+
 
 1. Mendapatkan semua list informasi
 
@@ -73,10 +76,12 @@ MAINURL/jadwal/hari/{hari}/rombel/{rombel}/{APIKEY}
 MAINURL/jadwal/{APIKEY}
 ```
 
-# Hasil respon
+
+#Hasil respon
 Hasil respon yang memungkinkan.
 
-### Jika tidak ditemukan
+
+####Jika tidak ditemukan
 
 ```json
 {
@@ -108,7 +113,8 @@ Hasil respon yang memungkinkan.
 }
 ```
 
-### Jika ditemukan untuk jadwal
+
+####Jika ditemukan untuk jadwal
 
 ```json
  {
@@ -132,7 +138,8 @@ Hasil respon yang memungkinkan.
  }
  ```
 
- ### Jika ditemukan untuk beberapa kondisi jadwal yang menghasilkan hasil dua rombel sekaligus
+
+ ####Jika ditemukan untuk beberapa kondisi jadwal yang menghasilkan hasil dua rombel sekaligus
 
  ```json
  {
@@ -169,6 +176,8 @@ Hasil respon yang memungkinkan.
  		}
  }
  ```
+
+ 
  Dalam json decode PHP, untuk mengakses data di atas jika sudah dijadikan array assosiatif adalah 
 
  ```php
