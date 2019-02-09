@@ -10,11 +10,11 @@ Alamat utama dari API ini adalah
 ```
 old :
 
-MAINURL = https://ilkomunnes.000webhostapp.com/api/
+MAINURL = https://ilkomunnes.000webhostapp.com/api
 
 new :
 
-MAINURL = https://ilkom2017api.herokuapp.com
+MAINURL = https://ilkom2017api.herokuapp.com/api
 ```
 
 
