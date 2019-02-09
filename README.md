@@ -8,7 +8,12 @@ Adapun cara penggunaannya adalah sebagai berikut.
 Alamat utama dari API ini adalah
 
 ```
+old :
+
 MAINURL = https://ilkomunnes.000webhostapp.com/api/
+
+new
+MAINURL = https://ilkom2017api.herokuapp.com
 ```
 
 Fungsi yang tersedia hanya GET. Berikut parameternya.
@@ -116,7 +121,8 @@ Hasil respon yang memungkinkan.
             "hari": "string",
             "jam": "string",
             "tempat": "string",
-            "rombel": "string"
+            "rombel": "string",
+            "kode_hari": "string"
         }
  
         {
@@ -125,3 +131,50 @@ Hasil respon yang memungkinkan.
  ]
  }
  ```
+
+ ### Jika ditemukan untuk beberapa kondisi jadwal yang menghasilkan hasil dua rombel sekaligus
+
+ ```json
+ {
+ 	"koneksi": true,
+ 	"status": "Success",
+ 	"data":
+ 		{
+ 			"rombel 1":
+ 				{
+ 					"id": "string",
+ 					"makul": "string",
+ 					"hari": "string",
+ 					"jam": "string",
+ 					"tempat": "string",
+ 					"kode_hari": "string"
+ 				}
+ 				{
+ 					"..."
+ 				}
+ 		}
+ 		{
+ 			"rombel 2":
+ 				{
+ 					"id": "string",
+ 					"makul": "string",
+ 					"hari": "string",
+ 					"jam": "string",
+ 					"tempat": "string",
+ 					"kode_hari": "string"
+ 				}
+ 				{
+ 					"..."
+ 				}
+ 		}
+ }
+ ```
+ Dalam json decode PHP, untuk mengakses data di atas jika sudah dijadikan array assosiatif adalah 
+
+ ```php
+$get = file_get_contents('URI API');
+$decode = json_decode($get, true);
+
+$rombel1 = $decode['data'][0]['rombel 1'];
+$rombel2 = $decode['data'][1]['rombel 2'];
+```
